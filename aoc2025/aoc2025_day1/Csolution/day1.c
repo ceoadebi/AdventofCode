@@ -14,7 +14,7 @@
 
 */ 
 
-int rotateDial(int rotationDirection, int currentDialLocation, int rotateHowFar){
+unsigned int rotateDial(int rotationDirection, int currentDialLocation, int rotateHowFar){
     return ((rotationDirection * rotateHowFar) + currentDialLocation) % 100; 
 
 }
@@ -24,7 +24,7 @@ int main() {
     FILE* fp = fopen("input.txt", "r");
     int timesHitZero = 0;
     int dialLocation = 50;
-    int currentDialLocation;
+    int currentDialLocation = dialLocation;
     int rotDir = 1;
     // if there is no file 
     if (fp == NULL) {
